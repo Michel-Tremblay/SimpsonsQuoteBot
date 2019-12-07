@@ -1,11 +1,18 @@
 {
-  "name": "discord-bot",
+  "name": "simpsonsquotebot",
   "version": "1.0.0",
-  "description": "Discord bot for SitePoint",
+  "description": "Full or partial simpsons quote matching",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon index.js"
   },
-  "author": "Michiel Mulders",
-  "license": "ISC"
+  "author": "Michel Tremblay",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "frinkiac": "^1.0.2",
+    "jslint": "^0.12.1",
+    "nodemon": "^2.0.1"
+  }
 }
