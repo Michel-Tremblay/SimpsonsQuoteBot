@@ -1,8 +1,9 @@
 require('dotenv').config();
-import { Client } from 'discord.js';
-const bot = new Client();
+const Discord = require('discord.js');
+const superagent = require('superagent');
+const bot = new Discord.Client();
 const TOKEN = process.env.TOKEN;
-import frinkiac, { search, memeMap } from 'frinkiac';
+var frinkiac = require('frinkiac');
 
 bot.login(TOKEN);
 
@@ -31,25 +32,19 @@ bot.on('message', msg => {
     let quote = msg.content.split('!homer');
     quote = quote.filter((quote) => { return quote !== ''; });
     quote = quote[0].trim();
-    search(quote)
-    .then(function(res) {
-        if (res.status !== 200) {
-          throw res;
-        } else {
-          return res.data;
-        }
-    })
-    .then(function(data) {
-        var memeURLs = data.map(memeMap, frinkiac);
-        if (Array.isArray(memeURLs)) {
-          url = memeURLs[memeURLs.length - 1];
-          msg.channel.send(url);
-        } else {
-          msg.channel.send(memeURLs);
-        }
-    })
-    .catch(function(err) {
-        throw err;
-    });
+    let url = frinkiac.searchURL(quote);
+    (async () => {
+      try {
+        const res = await superagent.get(url);
+        memes = res.body;
+        memeUrls = [];
+        memes.forEach(element => {
+          memeUrls.push('https://frinkiac.com/caption/' + element.Episode + '/' + element.Timestamp);
+        });
+        msg.author.send(`${memeUrls.length} results found \n ${memeUrls.join('\n')}`);
+      } catch (err) {
+        console.error(err);
+      }
+    })()
   }
 });
