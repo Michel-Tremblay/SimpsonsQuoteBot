@@ -1,8 +1,8 @@
 require('dotenv').config();
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+import { Client } from 'discord.js';
+const bot = new Client();
 const TOKEN = process.env.TOKEN;
-var frinkiac = require('frinkiac');
+import frinkiac, { search, memeMap } from 'frinkiac';
 
 bot.login(TOKEN);
 
@@ -31,16 +31,16 @@ bot.on('message', msg => {
     let quote = msg.content.split('!homer');
     quote = quote.filter((quote) => { return quote !== ''; });
     quote = quote[0].trim();
-    frinkiac.search(quote)
+    search(quote)
     .then(function(res) {
         if (res.status !== 200) {
-            throw res;
+          throw res;
         } else {
-            return res.data;
+          return res.data;
         }
     })
     .then(function(data) {
-        var memeURLs = data.map(frinkiac.memeMap, frinkiac);
+        var memeURLs = data.map(memeMap, frinkiac);
         if (Array.isArray(memeURLs)) {
           url = memeURLs[memeURLs.length - 1];
           msg.channel.send(url);

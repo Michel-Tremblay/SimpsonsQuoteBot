@@ -11,6 +11,7 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
+    "eslint": "^6.7.2",
     "frinkiac": "^1.0.2",
     "jslint": "^0.12.1",
     "nodemon": "^2.0.1"
