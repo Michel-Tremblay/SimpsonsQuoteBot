@@ -30,6 +30,7 @@ bot.on('message', msg => {
   if (msg.content.startsWith('!homer')) {
     let quote = msg.content.split('!homer');
     quote = quote.filter((quote) => { return quote !== ''; });
+    quote = quote[0].trim();
     frinkiac.search(quote)
     .then(function(res) {
         if (res.status !== 200) {
@@ -41,7 +42,7 @@ bot.on('message', msg => {
     .then(function(data) {
         var memeURLs = data.map(frinkiac.memeMap, frinkiac);
         if (Array.isArray(memeURLs)) {
-          url = memeURLs[memeURLs.length];
+          url = memeURLs[memeURLs.length - 1];
           msg.channel.send(url);
         } else {
           msg.channel.send(memeURLs);
