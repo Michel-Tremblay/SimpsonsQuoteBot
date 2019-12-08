@@ -58,7 +58,7 @@ bot.on("message", msg => {
     }
     command = command.replace(mode, "");
     switch (mode) {
-      case "-m":
+      case "-m": // Meme generation
         var memeGenerator = require("./Features/Quote");
         var url = new Promise((resolve, reject) => {
           let result = memeGenerator.getQuote(command);
@@ -75,25 +75,7 @@ bot.on("message", msg => {
             console.log(error);
           });
         break;
-      case "-h":
-        var help = require("./Features/Help");
-        var helpPage = new Promise((resolve, reject) => {
-          let result = help.help(command);
-          if (!result) {
-            reject("D-OH! No more :doughnuts:");
-          }
-          resolve(result);
-        });
-        helpPage
-          .then(result => {
-            console.log(result);
-            msg.author.send(result);
-          })
-          .catch(error => {
-            console.log(error);
-          });
-        break;
-      case "-c":
+      case "-c": // Character lookup
         var character = require("./Features/Character");
         var characterSearch = new Promise((resolve, reject) => {
           let result = character.characterSearch(command);
@@ -111,6 +93,12 @@ bot.on("message", msg => {
           });
         break;
       case "-f":
+        break;
+      case "-h": // help
+        var help = require("./Features/Help");
+        var helpPage = help.help(command);
+        console.debug(helpPage);
+        msg.author.send(helpPage);
         break;
     }
   }

@@ -17,7 +17,7 @@ This message will be updated when new features are released so check back soon!
 :doughnut: :beers:
 `;
 
-var help = async () => {
+var help = () => {
   return MAIN_HELP_PAGE;
 };
 module.exports = {
