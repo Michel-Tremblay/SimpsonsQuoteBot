@@ -8,7 +8,7 @@ const TOKEN = process.env.TOKEN;
 const DEBUG_MODE = process.env.DEBUG;
 const frinkiac = require("frinkiac");
 
-const MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX = /[,.']/gm;
+const MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX = /[,.'"]/gm;
 
 console.info("Starting... :)");
 
@@ -84,73 +84,43 @@ bot.on("message", msg => {
         reason => {
           msg.channel.send(reason);
         }
-      ).then(
-        memes => {
-          return new Promise((resolve, reject) => {
-            let knownEpisodes = [];
-            if (!memes) {
-              return reject("Could not resolve memes");
-            }
-            let responses = [];
-            responses.push(
-              memes.forEach(meme => {
-                return new Promise((resolve, reject) => {
-                  let reply = "";
-                  meme.Subtitles.forEach(subtitle => {
-                    let match = subtitle.Content.replace(
-                      MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
-                      ""
-                    );
-                    if (
-                      (match.toLowerCase().indexOf(quote.toLowerCase()) !==
-                        -1 ||
-                        match.toLowerCase() == quote.toLowerCase()) &&
-                      !knownEpisodes.includes(subtitle.Episode)
-                    ) {
-                      console.log(`Another Match ${match}`);
-                      knownEpisodes.push(subtitle.Episode);
-                      console.log(subtitle.Episode + "\n");
-                      console.log(subtitle.RepresentativeTimestamp + "\n");
-                      console.log(subtitle.Content + "\n");
-                      msg.channel.send(
-                        `${frinkiac.memeURL(
-                          subtitle.Episode,
-                          subtitle.RepresentativeTimestamp,
-                          subtitle.Content
-                        )}`
-                      );
-                      return;
-                    }
-                  });
-                  if (reply == "") {
-                    reject("DOH! Outta memes");
-                  }
-                  resolve(reply);
-                });
-              })
-            );
-            return resolve(responses);
-          });
-        },
-        reason => {
-          console.log(reason);
-        }
       )
-      .then(
-        memes => {
+      .then(memes => {
+        return new Promise((resolve, reject) => {
+          let knownEpisodes = [];
           if (!memes) {
-            setTimeout(() => {
-              if (!memes) {
-                msg.channel.send(memes);
-              } else {
-                msg.channel.send("DOH! Outta beer");
-              }
-            }, 3000);
+            return reject("Could not resolve memes");
           }
-        },
-        reason => {
-          msg.channel.send(reason);
-        }
-      );
+          let responses = [];
+          let meme = memes[0];
+          meme.Subtitles.forEach(subtitle => {
+            let match = subtitle.Content.replace(
+              MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
+              ""
+            );
+            if (
+              match.toLowerCase().indexOf(quote.toLowerCase()) !== -1 &&
+              !knownEpisodes.includes(subtitle.Episode)
+            ) {
+              knownEpisodes.push(subtitle.Episode);
+              resolve(
+                frinkiac.memeURL(
+                  subtitle.Episode,
+                  subtitle.RepresentativeTimestamp,
+                  subtitle.Content
+                )
+              );
+            }
+          });
+          if (responses.length < 1) {
+            reject("DOH! outta memes");
+          }
+          return resolve(responses);
+        });
+      }).then(result => {
+        msg.channel.send(result);
+      }).catch(reason => {
+        msg.channel.send(reason);
+      });
   }
 });
