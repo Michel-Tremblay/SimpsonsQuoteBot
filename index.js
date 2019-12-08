@@ -82,7 +82,7 @@ bot.on('message', msg => {
             ) {
               knownEpisodes.push(subtitle.Episode);
               console.log(subtitle.Episode + '\n');
-              console.log(subtitle.Timestamp + '\n');
+              console.log(subtitle.RepresentativeTimestamp + '\n');
               console.log(subtitle.Content + '\n');
               reply += `${frinkiac.memeURL(subtitle.Episode, subtitle.RepresentativeTimestamp,subtitle.Content)}`;
             }
