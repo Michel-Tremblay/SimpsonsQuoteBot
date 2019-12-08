@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Full or partial simpsons quote matching",
   "main": "index.js",
+  "engines": {
+    "node": "13.x",
+    "npm": "*"
+  }
   "scripts": {
     "test": "jest",
     "start": "nodemon index.js"
