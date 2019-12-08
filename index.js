@@ -91,7 +91,7 @@ bot.on('message', msg => {
          return resolve(reply); 
       });
     }).then(memes => {
-      msg.author.send(memes);
+      msg.channel.send(memes);
     }).catch(reason => {
       console.debug(reason);
     });
