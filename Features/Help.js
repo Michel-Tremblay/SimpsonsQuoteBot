@@ -1,22 +1,24 @@
 const MAIN_HELP_PAGE = `
-Greetings, friend. Do you wish to look as happy as me? Well, you've got the power inside you right now. Use it, by sending \`!homer -m <quote>\` to any channel and I will search Frinkiac for a meme representing your quote. Don't delay. Eternal happiness is only a command away!
+Greetings, friend. Do you wish to look as happy as me? Well, you've got the power inside you right now. Use it, by issuing one command to \`!homer <mode> <query>\` to any channel and I will search service your query approriately. Don't delay. Eternal happiness is only a command away!
+
+**Usage:** \`!homer <mode> <query>\`
+
+where \`<mode>\` is one of:
+    
+    \`-m\`, \`-c\`
+
+\`!homer -m <query>\` Search for meme with caption relevant to the given query
+\`!homer -c <query>\` Search for simpsons.fandom.com wiki page relevant to the given query
+
+\`!homer -h\` To get this message again!
+
+This message will be updated when new features are released so check back soon!
+
+:doughnut: :beers:
 `;
 
 module.exports = {
-  help: async command => {
-    switch (command) {
-      case null:
-        return MAIN_HELP_PAGE;
-      case "-m":
-        return MAIN_HELP_PAGE;
-      case "-h":
-        return MAIN_HELP_PAGE;
-      case "-c":
-        return MAIN_HELP_PAGE;
-      case "-f":
-        return MAIN_HELP_PAGE;
-      default:
-        return MAIN_HELP_PAGE;
-    }
+  help: async () => {
+    return MAIN_HELP_PAGE;
   }
 }
