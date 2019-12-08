@@ -1,5 +1,5 @@
 const MAIN_HELP_PAGE = `
-Greetings, friend. Do you wish to look as happy as me? Well, you've got the power inside you right now. Use it, by sending \`!homer -m <quote>\` to any channel and I will search Frinkiac a meme representing your quote. Don't delay. Eternal happiness is only a command away!
+Greetings, friend. Do you wish to look as happy as me? Well, you've got the power inside you right now. Use it, by sending \`!homer -m <quote>\` to any channel and I will search Frinkiac for a meme representing your quote. Don't delay. Eternal happiness is only a command away!
 `;
 
 module.exports = {
