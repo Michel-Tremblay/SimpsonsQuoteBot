@@ -1,5 +1,5 @@
 const MAIN_HELP_PAGE = `
-Greetings, friend. Do you wish to look as happy as me? Well, you've got the power inside you right now. Use it, by issuing one command to \`!homer <mode> <query>\` to any channel and I will search service your query approriately. Don't delay. Eternal happiness is only a command away!
+Greetings, friend. Do you wish to look as happy as me? Well, you've got the power inside you right now. Use it, by issuing one command to \`!homer <mode> <query>\`, any text channel in this server. Don't delay. Eternal happiness is only a command away!
 
 **Usage:** \`!homer <mode> <query>\`
 
