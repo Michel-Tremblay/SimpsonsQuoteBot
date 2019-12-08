@@ -4,16 +4,24 @@
 
 ### General
 
-**Keyword:** ```!homer <flag> <quote>```
+**Keyword:** ```!homer <flag> <query>```
 
-Homer implements the [Frinkiac API](https://www.npmjs.com/package/frinkiac) to search for relevent matches to your search.  
+Homer implements the [Frinkiac API](https://www.npmjs.com/package/frinkiac) to search for relevent matches to your ```<query>```.  
 
 ## Flags
 
 More modes to come!
+
+### -h Help
+
+This will send you a DM with basic usage info
 
 ### -m Meme generator (Beta)
 
 This mode will attempt to generate a link to a relavent image with a caption matching your ```quote```.  
 
 May return multiple results depending on how specific your ```quote``` is.  
+
+### -c Character lookup (Beta)
+
+This mode will attempt to lookup the given character on [Simpsons Fandom](https://www.simpsons.fandom.com/wiki) and give you a link to their wiki page.
