@@ -81,44 +81,52 @@ bot.on("message", msg => {
           msg.channel.send(reason);
         }
       )
-      .then(memes => {
-        return new Promise((resolve, reject) => {
-          let knownEpisodes = [];
-          if (!memes) {
-            return reject("Could not resolve memes");
-          }
-          let responses = [];
-          memes.Subtitles.forEach(subtitle => {
-            let match = subtitle.Content.replace(
-              MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
-              ""
-            );
-            if (
-              match.toLowerCase().indexOf(quote.toLowerCase()) !== -1 &&
-              !knownEpisodes.includes(subtitle.Episode)
-            ) {
-              knownEpisodes.push(subtitle.Episode);
-              resolve(
-                frinkiac.memeURL(
-                  subtitle.Episode,
-                  subtitle.RepresentativeTimestamp,
-                  subtitle.Content
-                )
-              );
+      .then(
+        memes => {
+          return new Promise((resolve, reject) => {
+            let knownEpisodes = [];
+            if (!memes) {
+              return reject("Could not resolve memes");
             }
+            let responses = [];
+            memes.Subtitles.forEach(subtitle => {
+              let match = subtitle.Content.replace(
+                MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
+                ""
+              );
+              if (
+                match.toLowerCase().indexOf(quote.toLowerCase()) !== -1 &&
+                !knownEpisodes.includes(subtitle.Episode)
+              ) {
+                knownEpisodes.push(subtitle.Episode);
+                resolve(
+                  frinkiac.memeURL(
+                    subtitle.Episode,
+                    subtitle.RepresentativeTimestamp,
+                    subtitle.Content
+                  )
+                );
+              }
+            });
+            if (responses.length < 1) {
+              reject("DOH! outta memes");
+            }
+            return resolve(responses);
           });
-          if (responses.length < 1) {
-            reject("DOH! outta memes");
-          }
-          return resolve(responses);
-        });
-      }, reason => {
-        console.debug(reason);
-      }).then(result => {
-        msg.channel.send(result);
-      }, reason => {
-        console.debug(reason);
-      }).catch(reason => {
+        },
+        reason => {
+          console.debug(reason);
+        }
+      )
+      .then(
+        result => {
+          msg.channel.send(result);
+        },
+        reason => {
+          console.debug(reason);
+        }
+      )
+      .catch(reason => {
         msg.channel.send(reason);
       });
   }
