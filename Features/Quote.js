@@ -42,6 +42,7 @@ module.exports = {
             ""
           );
           if (match.toLowerCase().indexOf(quote.toLowerCase()) !== -1) {
+            console.debug('match');
             result = frinkiac.memeURL(
               subtitle.Episode,
               subtitle.RepresentativeTimestamp,
