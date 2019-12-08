@@ -41,10 +41,7 @@ module.exports = {
             MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
             ""
           );
-          if (
-            match.toLowerCase().indexOf(quote.toLowerCase()) !== -1 || 
-            quote.toLowerCase().indexOf(match.toLowerCase())
-          ) {
+          if (match.toLowerCase().indexOf(quote.toLowerCase()) !== -1) {
             result = frinkiac.memeURL(
               subtitle.Episode,
               subtitle.RepresentativeTimestamp,

@@ -66,7 +66,6 @@ bot.on("message", msg => {
           resolve(memeGenerator.getQuote(command));
         });
         url.then(result => {
-          console.debug(result || 'DOH! No more doughnuts');
           msg.channel.send(result || 'DOH! No more doughnuts');
         });
         break;
