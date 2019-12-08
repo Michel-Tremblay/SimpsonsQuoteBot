@@ -32,9 +32,6 @@ bot.on("ready", () => {
  * @params {String} msg the message
  *
  * @return {String} URL to image result
- *
- * @TODO:
- *  *  hollow this out so that it's just a router to individual features based on the command used to invoke it
  */
 bot.on("message", msg => {
   if (msg.content.startsWith("!homer")) {
@@ -80,7 +77,6 @@ bot.on("message", msg => {
           var help = require("./Features/Help");
           var helpPage = new Promise((resolve, reject) => {
             let result = help.help(command);
-            console.debug(result);
             if (!result) {
               reject("No result");
             }
