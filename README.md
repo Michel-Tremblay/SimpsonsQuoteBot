@@ -4,15 +4,15 @@
 
 ### General
 
+**Keyword:** ```!homer <flag> <quote>```
+
 Homer implements the [Frinkiac API](https://www.npmjs.com/package/frinkiac) to search for relevent matches to your search.  
 
-## Modes
+## Flags
 
 More modes to come!
 
-### Meme generator (Beta)
-
-**Keyword:** ```!homer <quote>```
+### -m Meme generator (Beta)
 
 This mode will attempt to generate a link to a relavent image with a caption matching your ```quote```.  
 

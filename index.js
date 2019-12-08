@@ -63,10 +63,16 @@ bot.on("message", msg => {
       case "-m":
         var memeGenerator = require("./Features/Quote");
         var url = new Promise((resolve, reject) => {
-          resolve(memeGenerator.getQuote(command));
+          let result = memeGenerator.getQuote(command);
+          if (!result) {
+            reject("No result");
+          }
+          resolve(result);
         });
         url.then(result => {
           msg.channel.send(result || 'DOH! No more doughnuts');
+        }).catch(error => {
+          console.log(error);
         });
         break;
       case "-h":

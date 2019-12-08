@@ -4,7 +4,7 @@
   "description": "Full or partial simpsons quote matching",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js",
+    "test": "jest",
     "start": "nodemon index.js"
   },
   "author": "Michel Tremblay",
@@ -28,6 +28,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0"
   }
 }
