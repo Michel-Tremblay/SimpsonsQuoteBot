@@ -1,46 +1,29 @@
 require("dotenv").config();
-const Discord = require("discord.js");
-const bot = new Discord.Client();
 const process = require("process");
-const TOKEN = process.env.TOKEN;
 const DEBUG_MODE = process.env.DEBUG;
-
 const MODE_IDENTIFICATION_REGEX = /-[hmcf]\s/;
-console.info("Starting... :)");
 
-/**
- * login using the token in the .env file
- */
-bot.login(TOKEN);
-
-/**
- * On bot ready
- *
- * log the Discord id of the user
- *
- * @return {String} Discord user id confirmation
- */
-bot.on("ready", () => {
-  console.info(`Logged in as ${bot.user.tag}!`);
+it ('Should return meme link', async() => {
+  await expect(main('!homer -m time has ravaged your once-youthful looks')).resolves.toEqual('https://frinkiac.com/meme/S09E17/942924?b64lines=V0hPQS4uLiBUSU1FIEhBUyBSQVZBR0VEIFlPVVIgT05DRS1ZT1VUSEZVTCBMT09LUy4%3D');
 });
 
 /**
- * On new message
- *
- * if it starts with !homer, get the message and look up the quote
- *
- * @params {String} msg the message
- *
- * @return {String} response
+ * main
+ * 
+ * imitation of the on message routine executed in index.js
+ * 
+ * @param {String} msg Command to execute
+ * 
+ * !this is really stupid. i should really be importing index.js and calling the routine 
  */
-bot.on("message", msg => {
+var main = msg => {
   if (msg.content.startsWith("!homer")) {
     if (
       DEBUG_MODE &&
       msg.author.username !== "Selleal" &&
       msg.author.username !== "SimpsonsQuotes"
     ) {
-      msg.channel.send(
+      return(
         "Homer is getting some work done and may not yield results"
       );
     }
@@ -63,13 +46,13 @@ bot.on("message", msg => {
         var url = new Promise((resolve, reject) => {
           let result = memeGenerator.getQuote(command);
           if (!result) {
-            reject("D-OH! No more :doughnuts:");
+            reject("D-OH! No more doughnuts");
           }
           resolve(result);
         });
         url
           .then(result => {
-            msg.channel.send(result || "D-OH! No more :doughnuts:");
+            return(result || "D-OH! No more doughnuts");
           })
           .catch(error => {
             console.log(error);
@@ -80,14 +63,13 @@ bot.on("message", msg => {
         var helpPage = new Promise((resolve, reject) => {
           let result = help.help(command);
           if (!result) {
-            reject("D-OH! No more :doughnuts:");
+            reject("D-OH! No more doughnuts");
           }
           resolve(result);
         });
         helpPage
           .then(result => {
-            console.log(result);
-            msg.author.send(result);
+            return(result);
           })
           .catch(error => {
             console.log(error);
@@ -98,13 +80,13 @@ bot.on("message", msg => {
         var characterSearch = new Promise((resolve, reject) => {
           let result = character.characterSearch(command);
           if (!result) {
-            reject("D-OH! No more :doughnuts:");
+            reject("D-OH! No more doughnuts");
           }
           resolve(result);
         });
         characterSearch
           .then(result => {
-            msg.channel.send(result);
+            return(result);
           })
           .catch(error => {
             console.log(error);
@@ -114,4 +96,5 @@ bot.on("message", msg => {
         break;
     }
   }
-});
+};
+module.exports = main;
