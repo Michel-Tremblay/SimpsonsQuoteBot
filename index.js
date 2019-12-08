@@ -67,19 +67,15 @@ bot.on("message", msg => {
     rp(options)
       .then(
         results => {
-          let memes = [];
-          results.forEach(result => {
-            memes.push(frinkiac.captionURL(result.Episode, result.Timestamp));
-          });
-          return Promise.map(memes, obj => {
-            return rp(obj)
-              .then(body => {
-                return JSON.parse(body);
-              })
-              .catch(reason => {
-                console.debug(reason);
-              });
-          });
+          let result = results[0];
+          let url = frinkiac.captionURL(result.Episode, result.Timestamp);
+          return rp(url)
+            .then(body => {
+              return JSON.parse(body);
+            })
+            .catch(reason => {
+              console.debug(reason);
+            });
         },
         reason => {
           msg.channel.send(reason);
@@ -92,8 +88,7 @@ bot.on("message", msg => {
             return reject("Could not resolve memes");
           }
           let responses = [];
-          let meme = memes[0];
-          meme.Subtitles.forEach(subtitle => {
+          memes.Subtitles.forEach(subtitle => {
             let match = subtitle.Content.replace(
               MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
               ""
@@ -117,8 +112,12 @@ bot.on("message", msg => {
           }
           return resolve(responses);
         });
+      }, reason => {
+        console.debug(reason);
       }).then(result => {
         msg.channel.send(result);
+      }, reason => {
+        console.debug(reason);
       }).catch(reason => {
         msg.channel.send(reason);
       });
