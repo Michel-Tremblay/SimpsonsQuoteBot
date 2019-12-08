@@ -7,6 +7,8 @@ const process = require('process');
 const TOKEN = process.env.TOKEN;
 const frinkiac = require('frinkiac');
 
+const MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX = /[,.']/gm;
+
 console.info('Starting... :)');
 
 /**
@@ -36,7 +38,9 @@ bot.on('ready', () => {
  * 
  * @TODO: 
  *  *  hollow this out so that it's just a router to individual features 
-*      based on the command used to invoke it
+ *     based on the command used to invoke it
+ *  *  Match the given quote without punctuation and allow whitespace tolerance 
+ *     (1 space)
  */
 bot.on('message', msg => {
   if (msg.content.startsWith('!homer')) {
@@ -70,16 +74,17 @@ bot.on('message', msg => {
         if (!memes) {
           return reject('Could not resolve memes');
         }
-        /*
-          probably should not count punctuation and maybe some tolerance to 
-          whitespace
-        */
         memes.forEach(meme => {
           meme.Subtitles.forEach(subtitle => {
+            let match = subtitle.Content.replace(
+              MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
+              ''
+            );
             if (
-              subtitle.Content.toLowerCase().indexOf(quote.toLowerCase()) !== -1 &&
+              match.toLowerCase().indexOf(quote.toLowerCase()) !== -1 &&
               !knownEpisodes.includes(subtitle.Episode)
             ) {
+              console.log(`Another Match ${match}`);
               knownEpisodes.push(subtitle.Episode);
               console.log(subtitle.Episode + '\n');
               console.log(subtitle.RepresentativeTimestamp + '\n');
