@@ -8,7 +8,7 @@
 
 Homer implements the [Frinkiac API](https://www.npmjs.com/package/frinkiac) to search for relevent matches to your ```<query>```.  
 
-In general, it's best to use a portion of the quote as Homer uses indexOf() to test for a match.
+In general, it's best to use a portion of the quote as Homer uses ```Match.Subtitle.Caption.indexOf(query)``` to test for a match.
 
 ## Flags
 
