@@ -4,7 +4,8 @@
   "description": "Full or partial simpsons quote matching",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon index.js",
+    "start": "nodemon index.js"
   },
   "author": "Michel Tremblay",
   "license": "ISC",
