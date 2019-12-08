@@ -11,6 +11,12 @@
     "test": "jest",
     "start": "node index.js"
   },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./tests/setupJest.js"
+    ]
+  },
   "author": "Michel Tremblay",
   "license": "ISC",
   "dependencies": {
@@ -19,6 +25,7 @@
     "eslint-plugin-jest": "^23.1.1",
     "frinkiac": "^1.0.2",
     "google-search-results-nodejs": "^1.3.0",
+    "jest-fetch-mock": "^2.1.2",
     "jslint": "^0.12.1",
     "nodemon": "^2.0.1",
     "request": "^2.88.0",

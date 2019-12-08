@@ -5,19 +5,14 @@ const help = require("../Features/Help");
  */
 it("Shows the help page when no flag is used", async () => {
   let result = help.help(null);
-  result.then(res => {
-    expect(res).toEqual(help.MAIN_HELP_PAGE);
-  });
+  expect(result).toEqual(help.responsePage);
 });
 
 /**
  * Help page test when -h flag is used
  */
 it("Shows the help page when -h flag is used", async () => {
-  console.debug(help);
   let result = help.help("-h");
-  result.then(res => {
-    expect(res).toEqual(help.MAIN_HELP_PAGE);
-  });
+  expect(result).toEqual(help.responsePage);
 });
 module.exports = this;
