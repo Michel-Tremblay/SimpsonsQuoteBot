@@ -1,15 +1,11 @@
 require("dotenv").config();
 const Discord = require("discord.js");
-const Promise = require("bluebird");
-const rp = require("request-promise");
 const bot = new Discord.Client();
 const process = require("process");
 const TOKEN = process.env.TOKEN;
 const DEBUG_MODE = process.env.DEBUG;
-const frinkiac = require("frinkiac");
 
-const MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX = /[,.'"]/gm;
-
+const MODE_IDENTIFICATION_REGEX = /-[hmcf]\s/;
 console.info("Starting... :)");
 
 /**
@@ -51,83 +47,37 @@ bot.on("message", msg => {
         "Homer is getting some work done and may not yield results"
       );
     }
-    let quote = msg.content.split("!homer");
-    quote = quote.filter(quote => {
-      return quote !== "";
-    });
-    quote = quote[0].trim();
-    let url = frinkiac.searchURL(quote);
-    let options = {
-      uri: url,
-      headers: {
-        "User-Agent": "Request-Promise"
-      },
-      json: true
-    };
-    rp(options)
-      .then(
-        results => {
-          let result = results[0];
-          let url = frinkiac.captionURL(result.Episode, result.Timestamp);
-          return rp(url)
-            .then(body => {
-              return JSON.parse(body);
-            })
-            .catch(reason => {
-              console.debug(reason);
-            });
-        },
-        reason => {
-          msg.channel.send(reason);
-        }
-      )
-      .then(
-        memes => {
-          return new Promise((resolve, reject) => {
-            let knownEpisodes = [];
-            if (!memes) {
-              return reject("Could not resolve memes");
-            }
-            let responses = [];
-            memes.Subtitles.forEach(subtitle => {
-              let match = subtitle.Content.replace(
-                MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
-                ""
-              );
-              if (
-                match.toLowerCase().indexOf(quote.toLowerCase()) !== -1 &&
-                !knownEpisodes.includes(subtitle.Episode)
-              ) {
-                knownEpisodes.push(subtitle.Episode);
-                resolve(
-                  frinkiac.memeURL(
-                    subtitle.Episode,
-                    subtitle.RepresentativeTimestamp,
-                    subtitle.Content
-                  )
-                );
-              }
-            });
-            if (responses.length < 1) {
-              reject("DOH! outta memes");
-            }
-            return resolve(responses);
-          });
-        },
-        reason => {
-          msg.channel.send(reason);
-        }
-      )
-      .then(
-        result => {
-          msg.channel.send(result);
-        },
-        reason => {
-          msg.channel.send(reason);
-        }
-      )
-      .catch(reason => {
-        msg.channel.send(reason);
-      });
+    let command = msg.content.replace("!homer", "");
+    command = command.trim();
+    let modes = command.match(MODE_IDENTIFICATION_REGEX);
+    command = command.replace(MODE_IDENTIFICATION_REGEX, "").trim();
+    let mode = null;
+    if (!modes) {
+      mode = "h";
+    } else if (Array.isArray(modes)) {
+      mode = modes[0].trim();
+    } else {
+      mode = modes.trim();
+    }
+    switch (mode) {
+      case "-m":
+        var memeGenerator = require("./Features/Quote");
+        var url = new Promise((resolve, reject) => {
+          resolve(memeGenerator.getQuote(command));
+        });
+        url.then(result => {
+          console.debug(result || 'DOH! No more doughnuts');
+          msg.channel.send(result || 'DOH! No more doughnuts');
+        });
+        break;
+      case "-h":
+        var help = require("./help.js");
+        help(command);
+        break;
+      case "-c":
+        break;
+      case "-f":
+        break;
+    }
   }
 });
