@@ -6,7 +6,7 @@
   "engines": {
     "node": "13.x",
     "npm": "*"
-  }
+  },
   "scripts": {
     "test": "jest",
     "start": "nodemon index.js"
