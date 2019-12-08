@@ -2,6 +2,9 @@ require("dotenv").config();
 const process = require("process");
 const rp = require("request-promise");
 
+/**
+ * get env variables for Google Search API 
+ */
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 const SEARCH_ENGINE_ID = process.env.SEARCH_ENGINE_ID;
 const SEARCH_KEY = `key=${GOOGLE_API_KEY}`;
