@@ -8,21 +8,22 @@ const SEARCH_KEY = `key=${GOOGLE_API_KEY}`;
 const CX = `cx=${SEARCH_ENGINE_ID}`;
 const BASE_URL = process.env.BASE_URL;
 
-
 module.exports = {
-  fu: async arg => {
+  characterSearch: async character => {
     let options = {
-      uri: `${BASE_URL}/search${CX}&${SEARCH_KEY}&q=${arg.trim()}`,
+      uri: `${BASE_URL}${CX}&${SEARCH_KEY}&q=${character.trim()}`,
       headers: {
         "User-Agent": "Request-Promise"
       },
     }
-    return await rp(options).then(result => {
-      console.debug(result);
+    let result = await rp(options).then(result => {
+      let obj = JSON.parse(result);
+      return obj.items[0].link;
     }, error => {
-      console.debug(error);
+      return error;
     }).catch(error => {
-      console.debug(error);
+      return error;
     });
+    return result;
   }
 }
