@@ -53,12 +53,13 @@ bot.on("message", msg => {
     command = command.replace(MODE_IDENTIFICATION_REGEX, "").trim();
     let mode = null;
     if (!modes) {
-      mode = "h";
+      mode = "-h";
     } else if (Array.isArray(modes)) {
       mode = modes[0].trim();
     } else {
       mode = modes.trim();
     }
+    command = command.replace(mode, '');
     switch (mode) {
       case "-m":
         var memeGenerator = require("./Features/Quote");
@@ -76,8 +77,20 @@ bot.on("message", msg => {
         });
         break;
       case "-h":
-        var help = require("./help.js");
-        help(command);
+          var help = require("./Features/Help");
+          var helpPage = new Promise((resolve, reject) => {
+            let result = help.help(command);
+            console.debug(result);
+            if (!result) {
+              reject("No result");
+            }
+            resolve(result);
+          });
+          helpPage.then(result => {
+            msg.author.send(result);
+          }).catch(error => {
+            console.log(error);
+          });
         break;
       case "-c":
         break;
