@@ -34,8 +34,9 @@ bot.on('ready', () => {
  * 
  * @return {String} URL to image result
  * 
- * @TODO: hollow this out so that it's just a router to individual features 
- * based on the command used to invoke it
+ * @TODO: 
+ *  *  hollow this out so that it's just a router to individual features 
+*      based on the command used to invoke it
  */
 bot.on('message', msg => {
   if (msg.content.startsWith('!homer')) {
@@ -80,7 +81,10 @@ bot.on('message', msg => {
               !knownEpisodes.includes(subtitle.Episode)
             ) {
               knownEpisodes.push(subtitle.Episode);
-              reply += `${frinkiac.memeURL(subtitle.Episode, subtitle.Timestamp,subtitle.Content)}`;
+              console.log(subtitle.Episode + '\n');
+              console.log(subtitle.Timestamp + '\n');
+              console.log(subtitle.Content + '\n');
+              reply += `${frinkiac.memeURL(subtitle.Episode, subtitle.RepresentativeTimestamp,subtitle.Content)}`;
             }
           });
         });
