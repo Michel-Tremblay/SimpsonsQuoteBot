@@ -41,8 +41,10 @@ module.exports = {
             MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
             ""
           );
-          if (match.toLowerCase().indexOf(quote.toLowerCase()) !== -1) {
-            console.log("match");
+          if (
+            match.toLowerCase().indexOf(quote.toLowerCase()) !== -1 || 
+            quote.toLowerCase().indexOf(match.toLowerCase())
+          ) {
             result = frinkiac.memeURL(
               subtitle.Episode,
               subtitle.RepresentativeTimestamp,
@@ -50,7 +52,6 @@ module.exports = {
             );
           }
         });
-        console.log(result);
         return result;
       });
     return res;
