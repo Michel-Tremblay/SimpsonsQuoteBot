@@ -38,7 +38,7 @@ bot.on("message", msg => {
     if (
       DEBUG_MODE &&
       msg.author.username !== "Selleal" &&
-      msg.author.username !== "SimpsonsQuote"
+      msg.author.username !== "SimpsonsQuotes"
     ) {
       msg.channel.send(
         "Homer is getting some work done and may not yield results"
@@ -68,7 +68,7 @@ bot.on("message", msg => {
           resolve(result);
         });
         url.then(result => {
-          msg.channel.send(result || 'DOH! No more doughnuts');
+          msg.channel.send(result || 'D-OH! No more doughnuts');
         }).catch(error => {
           console.log(error);
         });
