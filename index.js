@@ -6,7 +6,6 @@ const bot = new Discord.Client();
 const process = require('process');
 const TOKEN = process.env.TOKEN;
 const frinkiac = require('frinkiac');
-const DEBUG_MODE = process.env.DEBUG;
 
 console.info('Starting... :)');
 
@@ -39,9 +38,6 @@ bot.on('ready', () => {
  * based on the command used to invoke it
  */
 bot.on('message', msg => {
-  /* if (DEBUG_MODE && msg.author.username !== 'Selleal') {
-    msg.channel.send('bot is currently under construction');
-  } */
   if (msg.content.startsWith('!homer')) {
     let quote = msg.content.split('!homer');
     quote = quote.filter(quote => { return quote !== ''; });
