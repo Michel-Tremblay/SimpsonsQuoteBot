@@ -5,7 +5,6 @@ const MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX = /[,.'"]/gm;
 
 module.exports = {
   getQuote: async quote => {
-    console.log("Starting meme generator");
     let url = frinkiac.searchURL(quote);
     let options = {
       uri: url,
@@ -42,7 +41,6 @@ module.exports = {
             ""
           );
           if (match.toLowerCase().indexOf(quote.toLowerCase()) !== -1) {
-            console.debug('match');
             result = frinkiac.memeURL(
               subtitle.Episode,
               subtitle.RepresentativeTimestamp,
