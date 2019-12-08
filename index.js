@@ -115,7 +115,7 @@ bot.on("message", msg => {
           });
         },
         reason => {
-          console.debug(reason);
+          msg.channel.send(reason);
         }
       )
       .then(
@@ -123,7 +123,7 @@ bot.on("message", msg => {
           msg.channel.send(result);
         },
         reason => {
-          console.debug(reason);
+          msg.channel.send(reason);
         }
       )
       .catch(reason => {
