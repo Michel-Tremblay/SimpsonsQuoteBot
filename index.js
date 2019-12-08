@@ -63,7 +63,7 @@ bot.on("message", msg => {
         var url = new Promise((resolve, reject) => {
           let result = memeGenerator.getQuote(command);
           if (!result) {
-            reject("No result");
+            reject('D-OH! No more doughnuts');
           }
           resolve(result);
         });
@@ -78,7 +78,7 @@ bot.on("message", msg => {
           var helpPage = new Promise((resolve, reject) => {
             let result = help.help(command);
             if (!result) {
-              reject("No result");
+              reject('D-OH! No more doughnuts');
             }
             resolve(result);
           });
@@ -89,6 +89,19 @@ bot.on("message", msg => {
           });
         break;
       case "-c":
+          var character = require("./Features/Character");
+          var characterSearch = new Promise((resolve, reject) => {
+            let result = character.characterSearch(command);
+            if (!result) {
+              reject('D-OH! No more doughnuts');
+            }
+            resolve(result);
+          });
+          characterSearch.then(result => {
+            msg.channel.send(result);
+          }).catch(error => {
+            console.log(error);
+          });
         break;
       case "-f":
         break;

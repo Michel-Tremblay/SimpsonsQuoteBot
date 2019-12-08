@@ -1,0 +1,487 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - bart simpson",
+    "totalResults": "34200",
+    "searchTerms": "bart simpson",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "013300485200960969429:uyx1c9efcvx"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - bart simpson",
+    "totalResults": "34200",
+    "searchTerms": "bart simpson",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "013300485200960969429:uyx1c9efcvx"
+   }
+  ]
+ },
+ "context": {
+  "title": "Simpsons.fandom"
+ },
+ "searchInformation": {
+  "searchTime": 0.354392,
+  "formattedSearchTime": "0.35",
+  "totalResults": "34200",
+  "formattedTotalResults": "34,200"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Bart Simpson | Simpsons Wiki | Fandom",
+   "htmlTitle": "\u003cb\u003eBart Simpson\u003c/b\u003e | Simpsons Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/Bart_Simpson",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "Bartholomew JoJo \"Bart\" Simpson (born April 1, 1979) is one of the main \ncharacters of The Simpsons. Bart is the mischievous, rebellious, misunderstood,\n ...",
+   "htmlSnippet": "Bartholomew JoJo &quot;\u003cb\u003eBart\u003c/b\u003e&quot; \u003cb\u003eSimpson\u003c/b\u003e (born April 1, 1979) is one of the main \u003cbr\u003e\ncharacters of The Simpsons. Bart is the mischievous, rebellious, misunderstood,\u003cbr\u003e\n&nbsp;...",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/Bart_Simpson",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/\u003cb\u003eBart\u003c/b\u003e_\u003cb\u003eSimpson\u003c/b\u003e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "184",
+      "height": "274",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQGDv9bm9fI3bLcaowc9DKsv1bv3ddOaKfhbfqv28u1F5BeXeBHp7GqjFk"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/Bart_Simpson",
+      "twitter:title": "Bart Simpson | Simpsons Wiki | Fandom",
+      "twitter:description": "Bartholomew JoJo \"Bart\" Simpson (born April 1, 1979) is one of the main characters of The Simpsons. Bart is the mischievous, rebellious, misunderstood, disruptive and \"potentially dangerous...",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "Bart Simpson",
+      "og:description": "Bartholomew JoJo \"Bart\" Simpson (born April 1, 1979) is one of the main characters of The Simpsons. Bart is the mischievous, rebellious, misunderstood, disruptive and \"potentially dangerous\" eldest child. He is the only son of Homer and Marge Simpson, and the older brother of Lisa and Maggie. He also has been nicknamed \"Cosmo\", after discovering a comet in \"Bart's Comet\". Bart has also been on the cover on numerous comics, such as \"Critical Hit\", \"Simpsons Treasure Trove#11\", and \"Winter...",
+      "og:url": "https://simpsons.fandom.com/wiki/Bart_Simpson",
+      "og:image": "https://vignette.wikia.nocookie.net/simpsons/images/6/65/Bart_Simpson.png/revision/latest?cb=20190409004756",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/Bart_Simpson"
+     }
+    ],
+    "videoobject": [
+     {
+      "name": "Inside the Mind of Bart Simpson",
+      "duration": "M01S49",
+      "description": "Everything you need to know about Bart Simpson",
+      "thumbnailurl": "https://cdn.jwplayer.com/v2/media/QhiXBIxX/poster.jpg?width=720",
+      "contenturl": "https://cdn.jwplayer.com/videos/QhiXBIxX-cSpmBcaY.mp4",
+      "uploaddate": "2017-12-28T22:26:53+00:00"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/6/65/Bart_Simpson.png/revision/latest?cb=20190409004756"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "JoJo Bouvier | Simpsons Wiki | Fandom",
+   "htmlTitle": "JoJo Bouvier | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/JoJo_Bouvier",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "His great-nephew Bart Simpson's middle name was presumably named after him \n(hence Bartholomew JoJo Simpson). He is also the maternal great uncle of ...",
+   "htmlSnippet": "His great-nephew \u003cb\u003eBart Simpson\u003c/b\u003e&#39;s middle name was presumably named after him \u003cbr\u003e\n(hence Bartholomew JoJo Simpson). He is also the maternal great uncle of&nbsp;...",
+   "cacheId": "MwD3ru62BaUJ",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/JoJo_Bouvier",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/JoJo_Bouvier",
+   "pagemap": {
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/JoJo_Bouvier",
+      "twitter:title": "JoJo Bouvier | Simpsons Wiki | Fandom",
+      "twitter:description": "Jonah Jordi \"JoJo\" Bouvier was the brother of Herman Bouvier, Arthur Bouvier, Clancy Bouvier, Chester Bouvier, and Charlene Bouvier, the brother-in-law of Jacqueline Bouvier (nee Gurney), and also...",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "JoJo Bouvier",
+      "og:description": "Jonah Jordi \"JoJo\" Bouvier was the brother of Herman Bouvier, Arthur Bouvier, Clancy Bouvier, Chester Bouvier, and Charlene Bouvier, the brother-in-law of Jacqueline Bouvier (nee Gurney), and also the paternal uncle of Marge, Patty and Selma. His great-nephew Bart Simpson's middle name was presumably named after him (hence Bartholomew JoJo Simpson). He is also the maternal great uncle of Bart, Lisa, and Maggie Simpson, the adoptive maternal uncle of Ling Bouvier, and also the uncle-in-law of...",
+      "og:url": "https://simpsons.fandom.com/wiki/JoJo_Bouvier",
+      "og:image": "https://images.wikia.com/simpsons/images/b/bc/Wiki.png",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/JoJo_Bouvier"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://images.wikia.com/simpsons/images/b/bc/Wiki.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "List of chalkboard gags | Simpsons Wiki | Fandom",
+   "htmlTitle": "List of chalkboard gags | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/List_of_chalkboard_gags",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "The following is a list of chalkboard gags seen on The Simpsons. ... At the time of \nthe original airing, Nancy Cartwright (the voice actress of Bart) was 32 years ...",
+   "htmlSnippet": "The following is a list of chalkboard gags seen on The \u003cb\u003eSimpsons\u003c/b\u003e. ... At the time of \u003cbr\u003e\nthe original airing, Nancy Cartwright (the voice actress of \u003cb\u003eBart\u003c/b\u003e) was 32 years&nbsp;...",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/List_of_chalkboard_gags",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/List_of_chalkboard_gags",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "200",
+      "height": "150",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNOokrbGk4lkgZJqOtgGxe4IeCCSEy7kxhCxuqcqe6pP4dVgfry9gvQ4ST"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/List_of_chalkboard_gags",
+      "twitter:title": "List of chalkboard gags | Simpsons Wiki | Fandom",
+      "twitter:description": "The following is a list of chalkboard gags seen on The Simpsons.",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "List of chalkboard gags",
+      "og:description": "The following is a list of chalkboard gags seen on The Simpsons.",
+      "og:url": "https://simpsons.fandom.com/wiki/List_of_chalkboard_gags",
+      "og:image": "https://vignette.wikia.nocookie.net/simpsons/images/6/60/No_Image_Available.png/revision/latest?cb=20170219125728",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/List_of_chalkboard_gags"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/3/3a/Chalkboard_gag_%28Bart_the_Genius%29.png/revision/latest/scale-to-width-down/200?cb=20130526215231"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Jessica Lovejoy | Simpsons Wiki | Fandom",
+   "htmlTitle": "Jessica Lovejoy | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/Jessica_Lovejoy",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "She is Bart's biggest crush after Laura Powers and first girlfriend as well. Nelson \nMuntz thinks she's innocent. She was featured as both Bart Simpson's love ...",
+   "htmlSnippet": "She is Bart&#39;s biggest crush after Laura Powers and first girlfriend as well. Nelson \u003cbr\u003e\nMuntz thinks she&#39;s innocent. She was featured as both \u003cb\u003eBart Simpson&#39;s\u003c/b\u003e love&nbsp;...",
+   "cacheId": "GBC13u5J1uYJ",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/Jessica_Lovejoy",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/Jessica_Lovejoy",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "166",
+      "height": "304",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTbHh52zx_vEBO0jCSWblJo6WY1AhfVGE3DdE2lLdjRl1k2sHpXrdW3u5U"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/Jessica_Lovejoy",
+      "twitter:title": "Jessica Lovejoy | Simpsons Wiki | Fandom",
+      "twitter:description": "Jessica Lovejoy is the rebellious daughter of Reverend Lovejoy and Helen Lovejoy. She is Bart's biggest crush after Laura Powers and first girlfriend as well. Nelson Muntz thinks she's innocent...",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "Jessica Lovejoy",
+      "og:description": "Jessica Lovejoy is the rebellious daughter of Reverend Lovejoy and Helen Lovejoy. She is Bart's biggest crush after Laura Powers and first girlfriend as well. Nelson Muntz thinks she's innocent. She was featured as both Bart Simpson's love interest and the main antagonist of Bart's Girlfriend. While appearing sweet and calm on the outside, Jessica actually has a penchant for mischief and chaos, and can cross the line farther than Bart himself, despite her being raised by very religious...",
+      "og:url": "https://simpsons.fandom.com/wiki/Jessica_Lovejoy",
+      "og:image": "https://images.wikia.com/simpsons/images/b/bc/Wiki.png",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/Jessica_Lovejoy"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/9/90/Jessica_Lovejoy_Tapped_Out.png/revision/latest?cb=20150410014221"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Butterfinger | Simpsons Wiki | Fandom",
+   "htmlTitle": "Butterfinger | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/Butterfinger",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "Each commercial closes with Bart saying the catchphrase, \"Nobody better lay a ... \nButterfinger announced on their Facebook page that Bart Simpson would ...",
+   "htmlSnippet": "Each commercial closes with Bart saying the catchphrase, &quot;Nobody better lay a ... \u003cbr\u003e\nButterfinger announced on their Facebook page that \u003cb\u003eBart Simpson\u003c/b\u003e would&nbsp;...",
+   "cacheId": "MZsYy1bss9kJ",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/Butterfinger",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/Butterfinger",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "257",
+      "height": "196",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS2zI_j35dpmgQfUBDSzyTnFgCSUyVzZfqW197dO2L6oiCglMy7xROFJAVl"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/Butterfinger",
+      "twitter:title": "Butterfinger | Simpsons Wiki | Fandom",
+      "twitter:description": "Butterfinger is a popular peanut-butter and chocolate candy bar. There have been 150 commercials for Butterfinger that aired on Fox, FX and Fox News Channel, which featured The Simpsons beginning...",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "Butterfinger",
+      "og:description": "Butterfinger is a popular peanut-butter and chocolate candy bar. There have been 150 commercials for Butterfinger that aired on Fox, FX and Fox News Channel, which featured The Simpsons beginning in 1988, when America's Most Wanted first aired on Fox before moving to Lifetime in 2011. Many of the commercials featured Homer trying to get Bart's Butterfinger, but would be one-upped by Bart each time. Each commercial closes with Bart saying the catchphrase, \"Nobody better lay a finger on my...",
+      "og:url": "https://simpsons.fandom.com/wiki/Butterfinger",
+      "og:image": "https://vignette.wikia.nocookie.net/simpsons/images/4/46/Butterfinger.jpg/revision/latest?cb=20070914211058",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/Butterfinger"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/4/46/Butterfinger.jpg/revision/latest?cb=20070914211058"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "The Telltale Head | Simpsons Wiki | Fandom",
+   "htmlTitle": "The Telltale Head | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/The_Telltale_Head",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "Synopsis. Bart cuts off the statue head of Jebediah Springfield to impress some \nbullies, but the city gets outraged and starts looking for the vandal.",
+   "htmlSnippet": "Synopsis. \u003cb\u003eBart\u003c/b\u003e cuts off the statue head of Jebediah Springfield to impress some \u003cbr\u003e\nbullies, but the city gets outraged and starts looking for the vandal.",
+   "cacheId": "qwkdH6AXca8J",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/The_Telltale_Head",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/The_Telltale_Head",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "265",
+      "height": "190",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Ow3W4yleuR77K4IdUKkFC92p62e0envOy83Q_pLtL4KLU3kEiOlQ1hqY"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/The_Telltale_Head",
+      "twitter:title": "The Telltale Head | Simpsons Wiki | Fandom",
+      "twitter:description": "The Telltale Head is the eighth episode of Season 1. This is the first episode of the series in which Sideshow Bob, Reverend Timothy Lovejoy, Jimbo Jones, Kearney Zzyzwicz, Dolph Starbeam, Ms...",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "The Telltale Head",
+      "og:description": "The Telltale Head is the eighth episode of Season 1. This is the first episode of the series in which Sideshow Bob, Reverend Timothy Lovejoy, Jimbo Jones, Kearney Zzyzwicz, Dolph Starbeam, Ms. Albright, and Apu Nahasapeemapetilon appear for the first time. This was also the first appearance of Krusty the Clown (if not counting the Ullman short The Krusty the Clown Show). Bart cuts off the statue head of Jebediah Springfield to impress some bullies, but the city gets outraged and starts...",
+      "og:url": "https://simpsons.fandom.com/wiki/The_Telltale_Head",
+      "og:image": "https://vignette.wikia.nocookie.net/simpsons/images/4/47/Season1_Episode8_Promo_Card_1990.gif/revision/latest?cb=20180321215645",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/The_Telltale_Head"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/4/47/Season1_Episode8_Promo_Card_1990.gif/revision/latest?cb=20180321215645"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "El Barto | Simpsons Wiki | Fandom",
+   "htmlTitle": "El Barto | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/El_Barto",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "El Barto is Bart Simpson's graffiti-tagging alter-ego and is one of the most \ninfamous outlaws in Springfield. El Barto's writings known as graffiti are around ...",
+   "htmlSnippet": "El Barto is \u003cb\u003eBart Simpson&#39;s\u003c/b\u003e graffiti-tagging alter-ego and is one of the most \u003cbr\u003e\ninfamous outlaws in Springfield. El Barto&#39;s writings known as graffiti are around&nbsp;...",
+   "cacheId": "IGAkc_wwm94J",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/El_Barto",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/El_\u003cb\u003eBart\u003c/b\u003eo",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "254",
+      "height": "199",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBfAY14qXR2Rfe8Ny3-vBawzbm5G7D8q3FDV3Eny7q7ZxzApFdMDG5Ge8"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/El_Barto",
+      "twitter:title": "El Barto | Simpsons Wiki | Fandom",
+      "twitter:description": "El Barto is Bart Simpson's graffiti-tagging alter-ego and is one of the most infamous outlaws in Springfield. El Barto's writings known as graffiti are around Springfield. This long-running joke...",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "El Barto",
+      "og:description": "El Barto is Bart Simpson's graffiti-tagging alter-ego and is one of the most infamous outlaws in Springfield. El Barto's writings known as graffiti are around Springfield. This long-running joke has never been unveiled by anyone -law enforcer or otherwise- to anyone in Springfield, even with a large number of clues given throughout the series. El Barto's signature can be seen in a number of different places around town, especially on state buildings. To this day, El Barto's true identity...",
+      "og:url": "https://simpsons.fandom.com/wiki/El_Barto",
+      "og:image": "https://vignette.wikia.nocookie.net/simpsons/images/0/06/IMG_1653.PNG/revision/latest?cb=20170101022958",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/El_Barto"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/0/06/IMG_1653.PNG/revision/latest?cb=20170101022958"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Brother's Little Helper | Simpsons Wiki | Fandom",
+   "htmlTitle": "Brother&#39;s Little Helper | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/Brother%27s_Little_Helper",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "After Bart continually wreaks havoc in school, Principal Skinner recommends to \nMarge and Homer that Bart take some behavior medication. The drug initially ...",
+   "htmlSnippet": "After \u003cb\u003eBart\u003c/b\u003e continually wreaks havoc in school, Principal Skinner recommends to \u003cbr\u003e\nMarge and Homer that \u003cb\u003eBart\u003c/b\u003e take some behavior medication. The drug initially&nbsp;...",
+   "cacheId": "2MawA2cI5HAJ",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/Brother%27s_Little_Helper",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/Brother%27s_Little_Helper",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "259",
+      "height": "194",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRV2GBsbU3MPOpB6-svYISPQQ-iD1zQVlhPmP12LvN9T5xB7vsKl6_BRTB_"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/Brother%27s_Little_Helper",
+      "twitter:title": "Brother's Little Helper | Simpsons Wiki | Fandom",
+      "twitter:description": "\"Lisa: Principal Skinner, what would you say is the most important firefighter tool? Would you say it's prevention? Principal Skinner: Oh, absolutely Lisa. That, and the sand-bucket.\"",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "Brother's Little Helper",
+      "og:description": "\"Lisa: Principal Skinner, what would you say is the most important firefighter tool? Would you say it's prevention? Principal Skinner: Oh, absolutely Lisa. That, and the sand-bucket.\"",
+      "og:url": "https://simpsons.fandom.com/wiki/Brother%27s_Little_Helper",
+      "og:image": "https://vignette.wikia.nocookie.net/simpsons/images/d/d3/Brother%27s_Little_Helper.jpg/revision/latest?cb=20191026184637",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/Brother%27s_Little_Helper"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/d/d3/Brother%27s_Little_Helper.jpg/revision/latest?cb=20191026184637"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Hugo Simpson II | Simpsons Wiki | Fandom",
+   "htmlTitle": "Hugo \u003cb\u003eSimpson\u003c/b\u003e II | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/Hugo_Simpson_II",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "Hugo Simpson II (born April 1, 1979) is a non-canon character and Bart's \nconjoined twin in \"Treehouse of Horror VII\". Shortly after their birth, they were \nseparated ...",
+   "htmlSnippet": "Hugo \u003cb\u003eSimpson\u003c/b\u003e II (born April 1, 1979) is a non-canon character and \u003cb\u003eBart&#39;s\u003c/b\u003e \u003cbr\u003e\nconjoined twin in &quot;Treehouse of Horror VII&quot;. Shortly after their birth, they were \u003cbr\u003e\nseparated&nbsp;...",
+   "cacheId": "nplr_gzt2EwJ",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/Hugo_Simpson_II",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/Hugo_\u003cb\u003eSimpson\u003c/b\u003e_II",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "170",
+      "height": "296",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQemCV86GKBmwOFNa_OQNPFL1DpONz9cT4LqP4yPIFDvmgfe0Qdb65yLDwh"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/Hugo_Simpson_II",
+      "twitter:title": "Hugo Simpson II | Simpsons Wiki | Fandom",
+      "twitter:description": "Hugo Simpson II (born April 1, 1979) is a non-canon character and Bart's conjoined twin in \"Treehouse of Horror VII\". Shortly after their birth, they were separated by Dr. Hibbert. Since then, he...",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "Hugo Simpson II",
+      "og:description": "Hugo Simpson II (born April 1, 1979) is a non-canon character and Bart's conjoined twin in \"Treehouse of Horror VII\". Shortly after their birth, they were separated by Dr. Hibbert. Since then, he has yet to make another appearance. Bart, Lisa, and Maggie discovered Hugo after they heard strange sounds coming from the attic and after Homer spilled the beans about there being four Simpson children, As the \"evil twin\", Hugo had been confined to living in the attic of the Simpson home and once a...",
+      "og:url": "https://simpsons.fandom.com/wiki/Hugo_Simpson_II",
+      "og:image": "https://vignette.wikia.nocookie.net/simpsons/images/0/02/Hugo.png/revision/latest?cb=20181117140953",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/Hugo_Simpson_II"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/0/02/Hugo.png/revision/latest?cb=20181117140953"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Jenda Simpson | Simpsons Wiki | Fandom",
+   "htmlTitle": "Jenda \u003cb\u003eSimpson\u003c/b\u003e | \u003cb\u003eSimpsons\u003c/b\u003e Wiki | Fandom",
+   "link": "https://simpsons.fandom.com/wiki/Jenda_Simpson",
+   "displayLink": "simpsons.fandom.com",
+   "snippet": "Jenda (formerly Jenda Simpson) is Bart's future girlfriend and eventual ex-wife. \nEight years into the future Jenda is dating Bart Simpson. They attend prom ...",
+   "htmlSnippet": "Jenda (formerly Jenda Simpson) is Bart&#39;s future girlfriend and eventual ex-wife. \u003cbr\u003e\nEight years into the future Jenda is dating \u003cb\u003eBart Simpson\u003c/b\u003e. They attend prom&nbsp;...",
+   "cacheId": "IU5ql7aJ3IkJ",
+   "formattedUrl": "https://simpsons.fandom.com/wiki/Jenda_Simpson",
+   "htmlFormattedUrl": "https://\u003cb\u003esimpsons\u003c/b\u003e.fandom.com/wiki/Jenda_\u003cb\u003eSimpson\u003c/b\u003e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "261",
+      "height": "193",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbRuKEZ3z43QGMeDlCCOt_yv1B3ir6g0pHezm4emaq13iIVJiLbdui8rTW"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes",
+      "twitter:card": "summary",
+      "twitter:site": "@getfandom",
+      "twitter:url": "https://simpsons.fandom.com/wiki/Jenda_Simpson",
+      "twitter:title": "Jenda Simpson | Simpsons Wiki | Fandom",
+      "twitter:description": "Jenda (formerly Jenda Simpson) is Bart's future girlfriend and eventual ex-wife. Eight years into the future Jenda is dating Bart Simpson. They attend prom together, and on the same night on a...",
+      "fb:app_id": "112328095453510",
+      "og:type": "article",
+      "og:site_name": "Simpsons Wiki",
+      "og:title": "Jenda Simpson",
+      "og:description": "Jenda (formerly Jenda Simpson) is Bart's future girlfriend and eventual ex-wife. Eight years into the future Jenda is dating Bart Simpson. They attend prom together, and on the same night on a picnic, he proposes to her, but Jenda turns him down and breaks up with him due to him not having any plans for the future where he can provide for them. In order to win her back, Bart accepts an offer made by Mr. Burns to attend Yale on a scholarship, originally intended for Lisa. Jenda takes him back...",
+      "og:url": "https://simpsons.fandom.com/wiki/Jenda_Simpson",
+      "og:image": "https://vignette.wikia.nocookie.net/simpsons/images/5/52/The_Simpsons_33.JPG/revision/latest?cb=20181122001322",
+      "apple-itunes-app": "app-id=422467074, app-arguments=https://simpsons.fandom.com/wiki/Jenda_Simpson"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://vignette.wikia.nocookie.net/simpsons/images/5/52/The_Simpsons_33.JPG/revision/latest?cb=20181122001322"
+     }
+    ]
+   }
+  }
+ ]
+}
