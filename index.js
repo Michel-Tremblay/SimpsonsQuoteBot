@@ -77,7 +77,7 @@ bot.on('message', msg => {
         memes.forEach(meme => {
           meme.Subtitles.forEach(subtitle => {
             if (
-              subtitle.Content == quote &&
+              subtitle.Content.toLowerCase().indexOf(quote.toLowerCase()) !== -1 &&
               !knownEpisodes.includes(subtitle.Episode)
             ) {
               knownEpisodes.push(subtitle.Episode);
