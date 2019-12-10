@@ -24,7 +24,6 @@ bot.login(TOKEN);
  * @return {String} response
  */
 bot.on("message", async msg => {
-  console.debug(msg);
   if (msg.content.startsWith("!homer")) {
     if (
       DEBUG_MODE &&
