@@ -13,7 +13,31 @@ module.exports = {
       },
       json: true
     };
-    let res = await rp(options)
+    try {
+      const results = await rp(options);
+      const result = results[0];
+      const url = frinkiac.captionURL(result.Episode, result.Timestamp);
+      const memes = await rp(url).then(body => JSON.parse(body));
+      const subtitle = memes.Subtitles.find(subtitle => {
+        const match = subtitle.Content.replace(
+          MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
+          ""
+        );
+        return match.toLowerCase().includes(quote.toLowerCase());
+      });
+      if (!subtitle) {
+        throw new Error("No result");
+      }
+      return frinkiac.memeURL(
+        subtitle.Episode,
+        subtitle.RepresentativeTimestamp,
+        subtitle.Content
+      );
+    } catch (e) {
+      return e;
+    }
+
+    /* let res = await rp(options)
       .then(
         results => {
           let result = results[0];
@@ -50,6 +74,6 @@ module.exports = {
         });
         return result;
       });
-    return res;
+    return res; */
   }
 };
