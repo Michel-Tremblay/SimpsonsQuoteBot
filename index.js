@@ -81,8 +81,7 @@ var routeMsg = async (msg) => {
     case "-f":
       break;
     case "-h": // help
-      var helpPage = help.help(command);
-      msg.author.send(helpPage);
+      msg.author.send(help.help(command));
       break;
   }
 };
