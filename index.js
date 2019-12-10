@@ -4,7 +4,9 @@ const bot = new Discord.Client();
 const process = require("process");
 const TOKEN = process.env.TOKEN;
 const DEBUG_MODE = process.env.DEBUG;
-
+const help = require("./Features/Help");
+const character = require("./Features/Character");
+const memeGenerator = require("./Features/Quote");
 const MODE_IDENTIFICATION_REGEX = /-[hmcf]\s/;
 
 /**
@@ -46,7 +48,7 @@ bot.on("message", async msg => {
  * 
  * @param {\Discord.js\Message} msg the message that was sent
  * 
- * @return string | null
+ * @return string
  */
 var routeMsg = async (msg) => {
   let command = msg.content.replace("!homer", "");
@@ -64,16 +66,12 @@ var routeMsg = async (msg) => {
   command = command.replace(mode, "");
   switch (mode) {
     case "-m": // Meme generation
-      var memeGenerator = require("./Features/Quote");
-      return new Promise((resolve, reject) => {
         let result = memeGenerator.getQuote(command);
         if (!result) {
-          reject("D-OH! No more :doughnuts:");
+          throw new Error("D-OH! No more :doughnuts:");
         }
-        resolve(result);
-      });
+        return result;
     case "-c": // Character lookup
-      var character = require("./Features/Character");
       return new Promise((resolve, reject) => {
         var result = character.characterSearch(command);
         if (!result) {
@@ -84,7 +82,6 @@ var routeMsg = async (msg) => {
     case "-f":
       break;
     case "-h": // help
-      var help = require("./Features/Help");
       var helpPage = help.help(command);
       msg.author.send(helpPage);
       break;
