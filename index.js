@@ -78,8 +78,6 @@ var routeMsg = async (msg) => {
         }
         resolve(result);
       });
-    case "-f":
-      break;
     case "-h": // help
       msg.author.send(help.help(command));
       break;
