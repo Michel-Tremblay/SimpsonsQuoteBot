@@ -17,10 +17,8 @@ This message will be updated when new features are released so check back soon!
 :doughnut: :beers:
 `;
 
-var help = () => {
-  return MAIN_HELP_PAGE;
-};
+const help = () => MAIN_HELP_PAGE;
 module.exports = {
   help,
-  responsePage: MAIN_HELP_PAGE
+  responsePage: MAIN_HELP_PAGE,
 };
