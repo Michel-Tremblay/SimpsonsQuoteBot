@@ -36,44 +36,5 @@ module.exports = {
     } catch (e) {
       return e;
     }
-
-    /* let res = await rp(options)
-      .then(
-        results => {
-          let result = results[0];
-          let url = frinkiac.captionURL(result.Episode, result.Timestamp);
-          return rp(url)
-            .then(body => {
-              return JSON.parse(body);
-            })
-            .catch(reason => {
-              console.debug(reason);
-            });
-        },
-        reason => {
-          return reason;
-        }
-      )
-      .catch(reason => {
-        return reason;
-      })
-      .then(memes => {
-        var result = "";
-        memes.Subtitles.forEach(subtitle => {
-          let match = subtitle.Content.replace(
-            MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
-            ""
-          );
-          if (match.toLowerCase().indexOf(quote.toLowerCase()) !== -1) {
-            result = frinkiac.memeURL(
-              subtitle.Episode,
-              subtitle.RepresentativeTimestamp,
-              subtitle.Content
-            );
-          }
-        });
-        return result;
-      });
-    return res; */
   },
 };
