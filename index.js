@@ -14,7 +14,6 @@ const { TOKEN } = process.env;
  * login using the token in the .env file
  * do not run if doing tests - throws UnhandledPromiseRejection
  */
-
 bot.login(TOKEN).then(() => {
   // eslint-disable-next-line no-console
   console.log('me so hungy');
