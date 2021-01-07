@@ -5,10 +5,9 @@ Greetings, friend. Do you wish to look as happy as me? Well, you've got the powe
 
 where \`<mode>\` is one of:
     
-    \`-m\`, \`-c\`
+    \`-m\`
 
 \`!homer -m <query>\` Search for meme with caption relevant to the given query
-\`!homer -c <query>\` Search for simpsons.fandom.com wiki page relevant to the given query
 
 \`!homer -h\` To get this message again!
 
