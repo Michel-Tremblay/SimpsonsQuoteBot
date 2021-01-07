@@ -8,7 +8,7 @@
     "npm": "*"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "start": "nodemon index.js",
     "lint": "eslint . --ext .js",
     "fix": "eslint --fix *.js Features/*.js tests/*.js"
