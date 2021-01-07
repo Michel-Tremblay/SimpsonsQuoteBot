@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/Michel-Tremblay/SimpsonsQuoteBot/workflows/Node.js%20CI/badge.svg)
+
 # Homer  
 
 ## How Homer works
