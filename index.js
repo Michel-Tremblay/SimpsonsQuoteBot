@@ -5,12 +5,9 @@ const bot = new Discord.Client();
 const process = require('process');
 
 const { TOKEN } = process.env;
-let CI;
-if ('CI' in process.env) {
-  CI = process.env;
-} else {
-  CI = false;
-}
+const { CI } = process.env;
+const { ADMIN_USERNAME } = process.env;
+const { BOT_USERNAME } = process.env;
 const DEBUG_MODE = process.env.DEBUG;
 const help = require('./Features/Help');
 const memeGenerator = require('./Features/Quote');
@@ -19,20 +16,15 @@ const MODE_IDENTIFICATION_REGEX = /-[hmcf]\s/;
 
 /**
  * login using the token in the .env file
+ * do not run if doing tests - throws UnhandledPromiseRejection
  */
-if (!CI) {
-  bot.login(TOKEN)
-    .then(() => {
-      /* eslint-disable no-console */
-      console.log('Me so hungy');
-      /* eslint-enable no-console */
-    })
-    .catch((err) => {
-      /* eslint-disable no-console */
-      console.debug(err);
-      /* eslint-enable no-console */
-    });
-}
+
+bot.login(TOKEN).then(() => {
+  console.log('me so hungy');
+}).catch((error) => {
+  console.debug(error);
+});
+
 /**
  * routeMsg
  *
@@ -65,10 +57,10 @@ const routeMsg = async (msg) => {
       }
       return result;
     case '-h': // help
-      msg.author.send(help.help(command));
+      result = help.help(command);
       break;
     default:
-      msg.author.send(help.help(command));
+      result = help.help(command);
       break;
   }
   return result;
@@ -87,8 +79,8 @@ bot.on('message', async (msg) => {
   if (msg.content.startsWith('!homer')) {
     if (
       DEBUG_MODE
-      && msg.author.username !== 'Selleal'
-      && msg.author.username !== 'SimpsonsQuotes'
+      && msg.author.username !== ADMIN_USERNAME
+      && msg.author.username !== BOT_USERNAME
     ) {
       msg.channel.send(
         'Homer is getting some work done and may not yield results',
