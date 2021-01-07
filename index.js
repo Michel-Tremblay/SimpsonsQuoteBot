@@ -5,7 +5,12 @@ const bot = new Discord.Client();
 const process = require('process');
 
 const { TOKEN } = process.env;
-const { CI } = process.env;
+let CI;
+if ('CI' in process.env) {
+  CI = process.env;
+} else {
+  CI = false;
+}
 const DEBUG_MODE = process.env.DEBUG;
 const help = require('./Features/Help');
 const memeGenerator = require('./Features/Quote');
@@ -16,7 +21,17 @@ const MODE_IDENTIFICATION_REGEX = /-[hmcf]\s/;
  * login using the token in the .env file
  */
 if (!CI) {
-  bot.login(TOKEN);
+  bot.login(TOKEN)
+    .then(() => {
+      /* eslint-disable no-console */
+      console.log('Me so hungy');
+      /* eslint-enable no-console */
+    })
+    .catch((err) => {
+      /* eslint-disable no-console */
+      console.debug(err);
+      /* eslint-enable no-console */
+    });
 }
 /**
  * routeMsg
