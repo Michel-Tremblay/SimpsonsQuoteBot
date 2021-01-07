@@ -7,7 +7,6 @@ const process = require('process');
 const { TOKEN } = process.env;
 const DEBUG_MODE = process.env.DEBUG;
 const help = require('./Features/Help');
-const character = require('./Features/Character');
 const memeGenerator = require('./Features/Quote');
 
 const MODE_IDENTIFICATION_REGEX = /-[hmcf]\s/;
@@ -48,14 +47,6 @@ const routeMsg = async (msg) => {
         throw new Error('D-OH! No more :doughnuts:');
       }
       return result;
-    case '-c': // Character lookup
-      return new Promise((resolve, reject) => {
-        result = character.characterSearch(command);
-        if (!result) {
-          reject(new Error('D-OH! No more :doughnuts:'));
-        }
-        resolve(result);
-      });
     case '-h': // help
       msg.author.send(help.help(command));
       break;
