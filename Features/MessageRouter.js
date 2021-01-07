@@ -2,6 +2,7 @@ const help = require('./Help');
 const memeGenerator = require('./Quote');
 
 const MODE_IDENTIFICATION_REGEX = /-[hm]\s/;
+
 /**
  * routeMsg
  *
