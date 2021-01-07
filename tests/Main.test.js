@@ -7,7 +7,8 @@ it('Should return meme link', async () => {
       if (err) {
         return err;
       }
-      await expect(router.routeMsg(JSON.parse(data))).resolves.toEqual('https://frinkiac.com/meme/S09E17/942924?b64lines=V0hPQS4uLiBUSU1FIEhBUyBSQVZBR0VEIFlPVVIgT05DRS1ZT1VUSEZVTCBMT09LUy4%3D');
+      await expect(router.routeMsg(JSON.parse(data)))
+        .resolves.toEqual('https://frinkiac.com/meme/S09E17/942924?b64lines=V0hPQS4uLiBUSU1FIEhBUyBSQVZBR0VEIFlPVVIgT05DRS1ZT1VUSEZVTCBMT09LUy4%3D');
       return null;
     });
   } catch (e) {

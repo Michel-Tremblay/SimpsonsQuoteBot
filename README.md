@@ -24,6 +24,3 @@ This mode will attempt to generate a link to a relavent image with a caption mat
 
 May return multiple results depending on how specific your ```query``` is.  
 
-### -c Character lookup (Beta)
-
-This mode will attempt to lookup the given character on [Simpsons Fandom](https://www.simpsons.fandom.com/wiki) and give you a link to their wiki page.
