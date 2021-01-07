@@ -5,6 +5,7 @@ const bot = new Discord.Client();
 const process = require('process');
 
 const { TOKEN } = process.env;
+const { CI } = process.env;
 const DEBUG_MODE = process.env.DEBUG;
 const help = require('./Features/Help');
 const memeGenerator = require('./Features/Quote');
@@ -14,8 +15,9 @@ const MODE_IDENTIFICATION_REGEX = /-[hmcf]\s/;
 /**
  * login using the token in the .env file
  */
-bot.login(TOKEN);
-
+if (!CI) {
+  bot.login(TOKEN);
+}
 /**
  * routeMsg
  *
