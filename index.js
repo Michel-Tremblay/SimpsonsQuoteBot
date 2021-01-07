@@ -77,9 +77,13 @@ bot.on('message', async (msg) => {
         'Homer is getting some work done and may not yield results',
       );
     }
-    await routeMsg(msg).then((res) => {
-      msg.channel.send(res);
-    });
+    await routeMsg(msg)
+      .then((res) => {
+        msg.channel.send(res);
+      })
+      .catch((errors) => {
+        msg.author.send(errors);
+      });
   }
 });
 

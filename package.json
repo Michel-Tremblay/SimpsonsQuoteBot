@@ -11,7 +11,7 @@
     "test": "jest",
     "start": "node index.js",
     "lint": "eslint . --ext .js",
-    "fix": "eslint --fix */**/*.js"
+    "fix": "eslint --fix *.js Features/*.js tests/*.js"
   },
   "jest": {
     "automock": false,

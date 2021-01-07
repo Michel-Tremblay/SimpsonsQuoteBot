@@ -14,10 +14,12 @@ module.exports = {
       json: true,
     };
     try {
-      const results = await rp(options);
+      const results = await rp(options).catch((errors) => errors);
       const result = results[0];
       const captionURL = frinkiac.captionURL(result.Episode, result.Timestamp);
-      const memes = await rp(captionURL).then((body) => JSON.parse(body));
+      const memes = await rp(captionURL)
+        .then((body) => JSON.parse(body))
+        .catch((errors) => errors);
       const subtitle = memes.Subtitles.find((title) => {
         const match = title.Content.replace(
           MEME_QUOTE_PUNCTUATION_TOLERANCE_REGEX,
