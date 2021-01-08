@@ -34,10 +34,6 @@ bot.login(TOKEN).then(() => {
  */
 bot.on('message', async (msg) => {
   if (msg.content.startsWith('!homer')) {
-    fs.writeFile('./message.txt', JSON.stringify(msg), (err) => {
-      if (err) throw err;
-      console.log('The file has been saved!');
-    });
     if (
       DEBUG_MODE
       && msg.author.username !== ADMIN_USERNAME
