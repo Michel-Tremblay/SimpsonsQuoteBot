@@ -8,6 +8,7 @@ const helpMessageJson = 'samples/HelpMessage.json';
 const defaultMessageJson = 'samples/NoFlagMessage.json';
 const InvalidFlagMessageJson = 'samples/InvalidFlagMessage.json';
 const NonQuoteMessageJson = 'samples/NonQuoteMessage.json';
+const NoTriggerMessageJson = 'samples/NoTriggerMessage.json';
 
 // eslint-disable-next-line consistent-return
 it('Should return meme link', () => {
@@ -51,5 +52,14 @@ it('Should return meme not found message', () => {
   const message = JSON.parse(jsonData);
   router.routeMsg(message).then((msg) => {
     expect(msg).toEqual('D-OH! No more :doughnut: :doughnut:');
+  }).catch((error) => error);
+});
+
+// eslint-disable-next-line consistent-return
+it('Should return meme not found message', () => {
+  const jsonData = fs.readFileSync(path.join(__dirname, NoTriggerMessageJson), 'utf8');
+  const message = JSON.parse(jsonData);
+  router.routeMsg(message).then((msg) => {
+    expect(msg).toEqual('');
   }).catch((error) => error);
 });
