@@ -26,7 +26,7 @@ bot.login(TOKEN).then(() => {
  *
  * if it starts with !homer, get the message and look up the quote
  *
- * @params {\Discord\Message} msg the message
+ * @param {\Discord\Message} msg the message
  *
  * @return {String} response
  */
