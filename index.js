@@ -1,5 +1,6 @@
 require('dotenv').config();
 const Discord = require('discord.js');
+const fs = require('fs');
 const process = require('process');
 const router = require('./Features/MessageRouter');
 
@@ -33,6 +34,10 @@ bot.login(TOKEN).then(() => {
  */
 bot.on('message', async (msg) => {
   if (msg.content.startsWith('!homer')) {
+    fs.writeFile('./message.txt', JSON.stringify(msg), (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+    });
     if (
       DEBUG_MODE
       && msg.author.username !== ADMIN_USERNAME
