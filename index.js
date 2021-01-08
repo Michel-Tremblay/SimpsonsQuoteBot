@@ -1,6 +1,5 @@
 require('dotenv').config();
 const Discord = require('discord.js');
-const fs = require('fs');
 const process = require('process');
 const router = require('./Features/MessageRouter');
 
