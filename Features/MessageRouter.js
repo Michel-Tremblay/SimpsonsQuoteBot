@@ -29,11 +29,8 @@ const routeMsg = async (msg) => {
   command = command.replace(mode, '');
   switch (mode) {
     case '-m': // Meme generation
-      result = memeGenerator.getQuote(command);
-      if (!result) {
-        throw new Error('D-OH! No more :doughnuts:');
-      }
-      return result;
+      result = memeGenerator.getQuote(command).then((res) => res).catch(() => false);
+      break;
     case '-h': // help
       result = help.help(command);
       break;

@@ -10,6 +10,10 @@ const bot = new Discord.Client();
 
 const { TOKEN } = process.env;
 
+bot.on('error', (error) => {
+  console.debug(error);
+});
+
 /**
  * login using the token in the .env file
  */
@@ -43,7 +47,11 @@ bot.on('message', async (msg) => {
     }
     await router.routeMsg(msg)
       .then((res) => {
-        msg.channel.send(res);
+        if (!res) {
+          msg.channel.send('D-OH! No more :doughnut: :doughnut:');
+        } else {
+          msg.channel.send(res);
+        }
       })
       .catch((errors) => {
         msg.author.send(errors);
