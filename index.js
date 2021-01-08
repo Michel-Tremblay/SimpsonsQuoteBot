@@ -11,6 +11,7 @@ const bot = new Discord.Client();
 const { TOKEN } = process.env;
 
 bot.on('error', (error) => {
+  // eslint-disable-next-line no-console
   console.debug(error);
 });
 
